@@ -12,7 +12,7 @@
         android:theme="@style/Theme.NavigationDrawer"
         tools:targetApi="31">
         <activity
-            android:name=".Home"
+            android:name="com.example.agrotwin.Home"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:exported="true">
             <intent-filter>
@@ -28,7 +28,7 @@
 
         <!-- Agrega tu actividad MainActivityLogin aquí -->
         <activity
-            android:name=".MainActivityLogin"
+            android:name="com.example.agrotwin.MainActivityLogin"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:exported="true">
             <intent-filter>

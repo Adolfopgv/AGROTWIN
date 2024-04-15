@@ -5,4 +5,23 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="home_text" />
+
+    <string name="queEsAgroTwin2">"  Nuestra plataforma intuitiva te permite visualizar y controlar cada aspecto de tus cultivos de manera conveniente     y eficiente."</string>
+    <string name="queEsAgroTwin3">" Con características como gráficos de tendencias, alertas personalizadas y análisis de datos en tiempo real,     Agrotwin te ayuda a tomar decisiones informadas para optimizar el rendimiento de tus cultivos y maximizar tus cosechas."</string>
+
+    <string name="AcercaDe">Acerca de AgroTwin</string>
+    <string name="InfoAgroTwin">¡Bienvenido a AgroTwin!</string>
+    <string name="EquipoYColaboradores">Equipo y Colaboradores</string>
+    <string name="EquipoYColaboradores2">Al equipo de prácticas y a los propios trabajadores de Hispasec al completo,     mencionando a Luciano Miguel Tobaria y al sector de desarrollo y comunicación por hacerlo posible.</string>
+    <string name="EquipoYColaboradores3">Reconocimiento en la participación de AgroTwin: </string>
+    <string name="Desarrolladores">Sector de desarrollo:</string>
+    <string name="DiseñoYComunicación">Sector de diseño y comunicación:</string>
+    <string name="EquipoYColaboradores4">- Adolfo Perez-gascón Valls</string>
+    <string name="EquipoYColaboradores5"> - Adrián Carmona gálvez</string>
+    <string name="EquipoYColaboradores6">- Karina Dudinskikh  </string>
+    <string name="EquipoYColaboradores7">- David Pimentel Salazar </string>
+    <string name="EquipoDiseño">- Mayela </string>
+    <string name="queEsAgroTwin1">Imagina tener el control total de tus invernaderos al alcance de tu mano.</string>
+
+
 </resources>

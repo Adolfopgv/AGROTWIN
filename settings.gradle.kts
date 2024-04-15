@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "AgroTwin"
+rootProject.name = "AGROTWIN"
 include(":app")
  
