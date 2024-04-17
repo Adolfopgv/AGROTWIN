@@ -24,4 +24,22 @@
     <string name="queEsAgroTwin1">Imagina tener el control total de tus invernaderos al alcance de tu mano.</string>
 
 
+    <string name="user">Usuario</string>
+    <string name="Contraseña">Contraseña</string>
+    <string name="Login">Iniciar Sesión</string>
+
+    <string name="nightMode">Modo Oscuro</string>
+    <string name="Notifications">Notificaciones</string>
+    <string name="privacy">Privacidad</string>
+    <string name="seguridad">Seguridad</string>
+    <string name="Size">Tamaño texto</string>
+
+    <string name="Home">Inicio</string>
+    <string name="Settings">Ajustes</string>
+    <string name="Share">Compartir</string>
+    <string name="Aboutus">Sobre nosotros</string>
+    <string name="logout">Cerrar sesión</string>
+    <string name="cuenta">Cuenta</string>
+
+
 </resources>

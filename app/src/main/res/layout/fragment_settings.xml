@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/background"
-    tools:context=".SettingsFragment"
+    tools:context=".SettingsActivity"
     tools:ignore="ExtraText">
 
 
@@ -52,19 +52,20 @@
 
             </TextView>
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:paddingStart="30dp"
-                android:layout_gravity="center"
-                android:background="@drawable/rounf_back_secondary_100"
-                android:text="Edit perfil"
-                android:textAllCaps="false"
-                android:textColor="@color/black"
-                android:paddingEnd="30dp">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/botonSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounf_back_secondary_100"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:text="Edit perfil"
+            android:textAllCaps="false"
+            android:textColor="@color/black">
 
-            </androidx.appcompat.widget.AppCompatButton>
+        </androidx.appcompat.widget.AppCompatButton>
 
             <LinearLayout
                 android:background="@drawable/round_back_whiite10_20"
@@ -97,7 +98,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:text="Night Mode"
+                        android:text="@string/nightMode"
                         android:textColor="#FFFFFF"
                         android:textStyle="bold"
                         android:layout_toEndOf="@+id/nightModeIcon">
@@ -105,17 +106,14 @@
 
                     </TextView>
 
-                    <androidx.appcompat.widget.SwitchCompat
-                        android:id="@+id/switchMode"
+                    <Button
                         android:layout_width="66dp"
                         android:layout_height="34dp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
-                        android:checked="false"
-                        android:switchMinWidth="50dp"
-                        android:theme="@style/nightModeSwitch">
+                        android:theme="@style/nightModeSwitch"
+                        android:id="@+id/btnDarkMode"></Button>
 
-                    </androidx.appcompat.widget.SwitchCompat>
 
                 </RelativeLayout>
 
@@ -142,7 +140,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:text="Notification"
+                        android:text="@string/Notifications"
                         android:textColor="#FFFFFF"
                         android:textStyle="bold"
                         android:layout_toEndOf="@+id/notificationIcon">
@@ -182,7 +180,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:text="Privacy"
+                        android:text="@string/privacy"
                         android:textColor="#FFFFFF"
                         android:textStyle="bold"
                         android:layout_toEndOf="@+id/privateAccountIcon">
@@ -239,7 +237,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginStart="20dp"
                         android:layout_toEndOf="@+id/securityIcon"
-                        android:text="Security &amp; Privacy"
+                        android:text="@string/seguridad"
                         android:textColor="#FFFFFF"
                         android:textStyle="bold">
 
@@ -273,7 +271,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginStart="20dp"
                         android:layout_toEndOf="@+id/textSizeIcon"
-                        android:text="Text Size"
+                        android:text="@string/Size"
                         android:textColor="#FFFFFF"
                         android:textStyle="bold">
 
