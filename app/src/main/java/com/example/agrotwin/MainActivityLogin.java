@@ -18,14 +18,18 @@ public class MainActivityLogin extends AppCompatActivity implements View.OnClick
 
     private ArrayList<EditText> editTexts;
 
-
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_login);
 
+        editTexts = new ArrayList<>();
+        editTexts.add(findViewById(R.id.userEditTextLogin));
+        editTexts.add(findViewById(R.id.passwdEditTextLogin));
 
+        Button loginBtn = findViewById(R.id.btnLogin);
+        loginBtn.setOnClickListener(this);
     }
 
     public void login(View view) {
@@ -43,6 +47,7 @@ public class MainActivityLogin extends AppCompatActivity implements View.OnClick
             Toast.makeText(getApplicationContext(), "Please provide a username and password.", Toast.LENGTH_SHORT).show();
         } else if (username.equals("admin") && password.equals("admin")) {
             login(v);
+            this.finish();
         } else {
             Toast.makeText(getApplicationContext(), "Invalid username or password.", Toast.LENGTH_SHORT).show();
         }

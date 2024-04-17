@@ -53,7 +53,7 @@
             </TextView>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/botonSettings"
+            android:id="@+id/btnSN"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -61,7 +61,7 @@
             android:background="@drawable/rounf_back_secondary_100"
             android:paddingStart="30dp"
             android:paddingEnd="30dp"
-            android:text="Edit perfil"
+            android:text="Prueba Notificaciones"
             android:textAllCaps="false"
             android:textColor="@color/black">
 
@@ -107,12 +107,12 @@
                     </TextView>
 
                     <Button
-                        android:layout_width="66dp"
+                        android:id="@+id/btnDarkMode"
+                        android:layout_width="30dp"
                         android:layout_height="34dp"
                         android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:theme="@style/nightModeSwitch"
-                        android:id="@+id/btnDarkMode"></Button>
+                        android:layout_marginEnd="11dp"
+                        android:theme="@style/nightModeSwitch"></Button>
 
 
                 </RelativeLayout>

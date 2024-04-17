@@ -52,13 +52,15 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         } else if (itemId == R.id.nav_settings) {
             Intent intent = new Intent(this, SettingsActivity.class);
             startActivity(intent);
-
         } else if (itemId == R.id.nav_share) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ShareFragment()).commit();
         } else if (itemId == R.id.nav_about) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AboutFragment()).commit();
         } else if (itemId == R.id.nav_logout) {
-            Toast.makeText(this, "Logout!", Toast.LENGTH_SHORT).show();
+            Intent it = new Intent(getApplicationContext(), MainActivityLogin.class);
+            startActivity(it);
+            Toast.makeText(this, "Logged out!", Toast.LENGTH_SHORT).show();
+            this.finish();
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);
