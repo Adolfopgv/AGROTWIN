@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/background"
     android:padding="10dp"
-    tools:context=".MainActivityLogin" >
+    tools:context=".Login" >
 
     <TextView
         android:id="@+id/loginTextView"
@@ -33,7 +33,7 @@
         app:layout_constraintHorizontal_bias="0.842"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginTextView"
-        tools:context=".MainActivityLogin">
+        tools:context=".Login">
 
         <EditText
             android:id="@+id/userEditTextLogin"

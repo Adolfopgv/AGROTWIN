@@ -13,10 +13,13 @@
         android:theme="@style/Theme.NavigationDrawer"
         tools:targetApi="31" >
         <activity
+            android:name=".NavMenuActivity"
+            android:exported="false" />
+        <activity
             android:name=".DetailActivity"
             android:exported="false" />
         <activity
-            android:name=".Home"
+            android:name=".HomeFragment"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
             <intent-filter>
@@ -28,9 +31,9 @@
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-        </activity> <!-- Agrega tu actividad MainActivityLogin aquí -->
+        </activity> <!-- Agrega tu actividad Login aquí -->
         <activity
-            android:name=".MainActivityLogin"
+            android:name=".Login"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
             <intent-filter>

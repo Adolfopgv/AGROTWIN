@@ -6,25 +6,27 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class DetailActivity extends AppCompatActivity {
+import java.util.ArrayList;
 
-    TextView detailDesc, detailTitle;
-    ImageView detailImage;
+public class DetailActivity extends AppCompatActivity {
+    private ArrayList<TextView> textViews;
+    private ImageView detailImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        detailDesc = findViewById(R.id.detailDesc);
-        detailTitle = findViewById(R.id.detailTitle);
+        textViews = new ArrayList<>();
+        textViews.add(findViewById(R.id.detailDesc));
+        textViews.add(findViewById(R.id.detailTitle));
         detailImage = findViewById(R.id.detailImage);
 
         Bundle bundle = getIntent().getExtras();
         if (bundle != null){
-            detailDesc.setText(bundle.getInt("Desc"));
+            textViews.get(0).setText(bundle.getInt("Desc"));
             detailImage.setImageResource(bundle.getInt("Image"));
-            detailTitle.setText(bundle.getString("Title"));
+            textViews.get(1).setText(bundle.getString("Title"));
         }
     }
 }
