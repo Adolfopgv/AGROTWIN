@@ -17,20 +17,12 @@
             android:exported="false" />
         <activity
             android:name=".DetailActivity"
+            android:parentActivityName=".HomeFragment"
             android:exported="false" />
         <activity
             android:name=".HomeFragment"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
+            android:parentActivityName=".NavMenuActivity"
+            android:exported="true">
         </activity> <!-- Agrega tu actividad Login aquí -->
         <activity
             android:name=".Login"
@@ -38,7 +30,11 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
         </activity>
         <activity android:name=".SettingsActivity" />
     </application>
