@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/background"
-    tools:context=".SettingsFragment"
+    tools:context=".SettingsActivity"
     tools:ignore="ExtraText">
 
 
@@ -17,11 +17,7 @@
 
     </RelativeLayout>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <LinearLayout
+    <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -49,26 +45,27 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+34 666 666 666"
+                android:text="correo@gmail.com"
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 android:layout_gravity="center">
 
             </TextView>
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:paddingStart="30dp"
-                android:layout_gravity="center"
-                android:background="@drawable/rounf_back_secondary_100"
-                android:text="Edit perfil"
-                android:textAllCaps="false"
-                android:textColor="@color/black"
-                android:paddingEnd="30dp">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounf_back_secondary_100"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:text="Prueba Notificaciones"
+            android:textAllCaps="false"
+            android:textColor="@color/black">
 
-            </androidx.appcompat.widget.AppCompatButton>
+        </androidx.appcompat.widget.AppCompatButton>
 
             <LinearLayout
                 android:background="@drawable/round_back_whiite10_20"
@@ -101,7 +98,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:text="Night Mode"
+                        android:text="@string/nightMode"
                         android:textColor="#FFFFFF"
                         android:textStyle="bold"
                         android:layout_toEndOf="@+id/nightModeIcon">
@@ -109,15 +106,14 @@
 
                     </TextView>
 
-                    <androidx.appcompat.widget.SwitchCompat
-                        android:layout_width="66dp"
+                    <Button
+                        android:id="@+id/btnDarkMode"
+                        android:layout_width="30dp"
                         android:layout_height="34dp"
                         android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:switchMinWidth="50dp"
-                        android:theme="@style/nightModeSwitch">
+                        android:layout_marginEnd="11dp"
+                        android:theme="@style/nightModeSwitch"></Button>
 
-                    </androidx.appcompat.widget.SwitchCompat>
 
                 </RelativeLayout>
 
@@ -144,7 +140,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:text="Notification"
+                        android:text="@string/Notifications"
                         android:textColor="#FFFFFF"
                         android:textStyle="bold"
                         android:layout_toEndOf="@+id/notificationIcon">
@@ -184,7 +180,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:text="Privacy"
+                        android:text="@string/privacy"
                         android:textColor="#FFFFFF"
                         android:textStyle="bold"
                         android:layout_toEndOf="@+id/privateAccountIcon">
@@ -211,12 +207,12 @@
 
             <!--                second section-->
             <LinearLayout
-                android:background="@drawable/round_back_whiite10_20"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/round_back_whiite10_20"
                 android:orientation="vertical"
                 android:padding="15dp">
 
@@ -226,37 +222,28 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        android:layout_width="40dp"
                         android:id="@+id/securityIcon"
+                        android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:padding="12dp"
                         android:background="@drawable/round_back_private_account"
+                        android:padding="12dp"
                         android:src="@drawable/baseline_security_24">
 
                     </ImageView>
 
                     <TextView
-                        android:layout_marginStart="20dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:text="Security &amp; Privacy"
+                        android:layout_marginStart="20dp"
+                        android:layout_toEndOf="@+id/securityIcon"
+                        android:text="@string/seguridad"
                         android:textColor="#FFFFFF"
-                        android:textStyle="bold"
-                        android:layout_toEndOf="@+id/securityIcon">
+                        android:textStyle="bold">
 
 
                     </TextView>
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/baseline_chevron_right_24"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true">
-
-
-                    </ImageView>
 
 
 
@@ -269,37 +256,28 @@
                     android:layout_marginTop="10dp">
 
                     <ImageView
-                        android:layout_width="40dp"
                         android:id="@+id/textSizeIcon"
+                        android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:padding="12dp"
                         android:background="@drawable/round_back_night_mode"
+                        android:padding="12dp"
                         android:src="@drawable/baseline_format_size_24">
 
                     </ImageView>
 
                     <TextView
-                        android:layout_marginStart="20dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:text="Text Size"
+                        android:layout_marginStart="20dp"
+                        android:layout_toEndOf="@+id/textSizeIcon"
+                        android:text="@string/Size"
                         android:textColor="#FFFFFF"
-                        android:textStyle="bold"
-                        android:layout_toEndOf="@+id/textSizeIcon">
+                        android:textStyle="bold">
 
 
                     </TextView>
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/baseline_chevron_right_24"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true">
-
-
-                    </ImageView>
 
 
 
@@ -312,47 +290,38 @@
                     android:layout_marginTop="10dp">
 
                     <ImageView
-                        android:layout_width="40dp"
                         android:id="@+id/Language_Icon"
+                        android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:padding="12dp"
                         android:background="@drawable/round_back_notifications"
+                        android:padding="12dp"
                         android:src="@drawable/baseline_language_24">
 
                     </ImageView>
 
-                    <TextView
-                        android:layout_marginStart="20dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:text="Language"
-                        android:textColor="#FFFFFF"
-                        android:textStyle="bold"
-                        android:layout_toEndOf="@+id/Language_Icon">
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_width="280dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="55dp"
+                        >
 
 
-                    </TextView>
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/baseline_chevron_right_24"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true">
+                    </Spinner>
 
 
-                    </ImageView>
+
 
 
 
                 </RelativeLayout>
 
-
-
-
+                <!--                comienzo de los cambios de lenguaje-->
 
             </LinearLayout>
+
+
+        </LinearLayout>
 
 
 
@@ -361,7 +330,3 @@
         </LinearLayout>
 
 
-    </ScrollView>
-
-
-</LinearLayout>

@@ -42,5 +42,8 @@
         <item name="android:colorForeground">#99FFFFFF</item>
     </style>
 
+    <style name="Background" parent="Theme.AppCompat.Light">
+        <item name="android:background">@color/background</item>
+    </style>
 
 </resources>

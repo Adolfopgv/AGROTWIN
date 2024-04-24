@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AgroTwin</string>
+    <string name="queEsAgroTwin1">Imagine having total control of your greenhouses at your fingertips.</string>
+    <string name="queEsAgroTwin2">"  Our intuitive platform allows you to visualize and control every aspect of your crops conveniently and efficiently."</string>
+    <string name="queEsAgroTwin3">" With features such as trend graphs, customized alerts and real-time data analysis, Agrotwin helps you make informed decisions to optimize your crop yields and maximize your harvests."</string>
+    <string name="InfoAgroTwin">Welcome to AgroTwin!</string>
+    <string name="EquipoYColaboradores">Team and Collaborators</string>
+    <string name="EquipoYColaboradores2">To the internship team and the entire Hispasec staff, mentioning Luciano Miguel Tobaria and the development and communication sector for making this possible.</string>
+    <string name="EquipoYColaboradores3">"Recognition of AgroTwin's participation: "</string>
+    <string name="Desarrolladores">Development sector:</string>
+    <string name="DiseñoYComunicación">Design and communication sector:</string>
+    <string name="EquipoYColaboradores4">- Adolfo Perez-gascón Valls</string>
+    <string name="EquipoYColaboradores5">" - Adrián Carmona gálvez"</string>
+    <string name="EquipoYColaboradores6">"- Karina Dudinskikh  "</string>
+    <string name="EquipoYColaboradores7">"- David Pimentel Salazar "</string>
+    <string name="EquipoDiseño">"- Mayela "</string>
+    <string name="AcercaDe">About AgroTwin</string>
+    <string name="user">User</string>
+    <string name="Contraseña">Password</string>
+    <string name="Login">Login</string>
+    <string name="nightMode">Dark mode</string>
+    <string name="Notifications">Notifications</string>
+    <string name="privacy">Privacity</string>
+    <string name="seguridad">Segurity</string>
+    <string name="Size">Text size</string>
+    <string name="Home">Home</string>
+    <string name="Settings">Settings</string>
+    <string name="Share">Share</string>
+    <string name="Aboutus">About us</string>
+    <string name="logout">Log out</string>
+    <string name="cuenta">Account</string>
+</resources>
