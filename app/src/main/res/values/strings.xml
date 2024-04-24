@@ -24,8 +24,8 @@
     <string name="queEsAgroTwin1">Imagina tener el control total de tus invernaderos al alcance de tu mano.</string>
 
 
-    <string name="user">Usuario</string>
-    <string name="Contraseña">Contraseña</string>
+    <string name="user">Introducir tu email</string>
+    <string name="Contraseña">Introducir tu contraseña</string>
     <string name="Login">Iniciar Sesión</string>
 
     <string name="nightMode">Modo Oscuro</string>
