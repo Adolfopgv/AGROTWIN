@@ -94,6 +94,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:switchMinWidth="50dp"
+                    android:thumbTint="@color/background_login_light"
                     android:theme="@style/nightModeSwitch">
 
                 </Switch>
@@ -155,44 +156,7 @@
 
             <!--                    Private Account-->
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/background_settings">>
 
-                <ImageView
-                    android:id="@+id/privateAccountIcon"
-                    android:layout_width="40dp"
-                    android:layout_height="55dp"
-                    android:padding="4dp"
-                    android:layout_marginStart="10dp"
-                    android:src="@drawable/baseline_privacy_tip_24" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="20dp"
-                    android:layout_toEndOf="@+id/privateAccountIcon"
-                    android:text="@string/privacy"
-                    android:textColor="#FFFFFF"
-                    android:textStyle="bold">
-
-
-                </TextView>
-
-                <androidx.appcompat.widget.SwitchCompat
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:switchMinWidth="50dp"
-                    android:theme="@style/privateAccountSwich">
-
-                </androidx.appcompat.widget.SwitchCompat>
-
-            </RelativeLayout>
 
 
         </LinearLayout>
@@ -202,53 +166,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="0dp"
             android:layout_marginEnd="20dp"
 
             android:orientation="vertical"
             android:padding="15dp">
 
             <!--  security -->
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/background_settings">>
 
-                <ImageView
-                    android:id="@+id/securityIcon"
-                    android:layout_width="40dp"
-                    android:layout_height="55dp"
-                    android:padding="4dp"
-                    android:layout_marginStart="10dp"
-                    android:src="@drawable/baseline_security_24">
-
-                </ImageView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="20dp"
-                    android:layout_toEndOf="@+id/securityIcon"
-                    android:text="@string/seguridad"
-                    android:textColor="#FFFFFF"
-                    android:textStyle="bold">
-
-
-                </TextView>
-
-
-            </RelativeLayout>
 
             <!-- Text Size -->
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/background_settings">>
+                android:background="@drawable/background_settings"><![CDATA[>
+
+
+
+                ]]>
 
                 <ImageView
-                    android:id="@+id/textSizeIcon"
+                    android:id="@+id/Language_Iconn"
                     android:layout_width="40dp"
                     android:layout_height="55dp"
                     android:padding="4dp"
@@ -257,18 +196,13 @@
 
                 </ImageView>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="20dp"
-                    android:layout_toEndOf="@+id/textSizeIcon"
-                    android:text="@string/Size"
-                    android:textColor="#FFFFFF"
-                    android:textStyle="bold">
+                <Spinner
+                    android:id="@+id/spinnerr"
+                    android:layout_width="280dp"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="55dp"
 
-
-                </TextView>
+                    />
 
 
             </RelativeLayout>
@@ -304,6 +238,37 @@
 
 
                 </Spinner>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_settings">>
+
+                <ImageView
+                    android:id="@+id/textSizeIcon"
+                    android:layout_width="40dp"
+                    android:layout_height="55dp"
+                    android:padding="4dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/baseline_info_24">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@+id/textSizeIcon"
+                    android:text="@string/Size"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold">
+
+
+                </TextView>
 
 
             </RelativeLayout>
