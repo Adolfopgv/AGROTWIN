@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/background_login_light"
-    tools:context=".SettingsActivity"
+    tools:context=".SettingsFragment"
     tools:ignore="ExtraText">
 
 
@@ -39,14 +39,11 @@
             android:layout_gravity="center"
             android:layout_marginTop="-10dp"
             android:text="@string/preferences"
-            android:textColor="@color/black"
-            android:textSize="22sp"
-            >
+            android:textColor="@color/text_dark"
+            android:textSize="22sp">
 
 
         </TextView>
-
-
 
 
         <LinearLayout
@@ -70,7 +67,8 @@
                     android:id="@+id/nightModeIcon"
                     android:layout_width="40dp"
                     android:layout_height="55dp"
-                    android:padding="12dp"
+                    android:padding="4dp"
+                    android:layout_marginStart="10dp"
                     android:src="@drawable/baseline_mode_night_24">
 
                 </ImageView>
@@ -88,13 +86,25 @@
 
                 </TextView>
 
-                <Button
+
+                <Switch
                     android:id="@+id/btnDarkMode"
-                    android:layout_width="30dp"
-                    android:layout_height="34dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="11dp"
-                    android:theme="@style/nightModeSwitch"></Button>
+                    android:layout_centerVertical="true"
+                    android:switchMinWidth="50dp"
+                    android:theme="@style/nightModeSwitch">
+
+                </Switch>
+<!--                <Button-->
+<!--                    android:id="@+id/btnDarkMode"-->
+<!--                    android:layout_width="30dp"-->
+<!--                    android:layout_height="34dp"-->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    android:layout_marginEnd="11dp"-->
+<!--                    android:layout_margin="10dp"-->
+<!--                    android:theme="@style/nightModeSwitch"></Button>-->
 
 
             </RelativeLayout>
@@ -112,7 +122,8 @@
                     android:id="@+id/notificationIcon"
                     android:layout_width="40dp"
                     android:layout_height="55dp"
-                    android:padding="12dp"
+                    android:padding="4dp"
+                    android:layout_marginStart="10dp"
                     android:src="@drawable/baseline_notifications_24">
 
                 </ImageView>
@@ -154,7 +165,8 @@
                     android:id="@+id/privateAccountIcon"
                     android:layout_width="40dp"
                     android:layout_height="55dp"
-                    android:padding="12dp"
+                    android:padding="4dp"
+                    android:layout_marginStart="10dp"
                     android:src="@drawable/baseline_privacy_tip_24" />
 
                 <TextView
@@ -206,7 +218,8 @@
                     android:id="@+id/securityIcon"
                     android:layout_width="40dp"
                     android:layout_height="55dp"
-                    android:padding="12dp"
+                    android:padding="4dp"
+                    android:layout_marginStart="10dp"
                     android:src="@drawable/baseline_security_24">
 
                 </ImageView>
@@ -238,7 +251,8 @@
                     android:id="@+id/textSizeIcon"
                     android:layout_width="40dp"
                     android:layout_height="55dp"
-                    android:padding="12dp"
+                    android:padding="4dp"
+                    android:layout_marginStart="10dp"
                     android:src="@drawable/baseline_format_size_24">
 
                 </ImageView>
@@ -266,14 +280,16 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/background_settings"><![CDATA[>
 
+
+
                 ]]>
 
                 <ImageView
                     android:id="@+id/Language_Icon"
                     android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:padding="12dp"
-
+                    android:layout_height="55dp"
+                    android:padding="4dp"
+                    android:layout_marginStart="10dp"
                     android:src="@drawable/baseline_language_24">
 
                 </ImageView>

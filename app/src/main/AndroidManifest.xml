@@ -23,7 +23,7 @@
             android:name=".HomeFragment"
             android:parentActivityName=".NavMenuActivity"
             android:exported="true">
-        </activity> <!-- Agrega tu actividad Login aquí -->
+        </activity>
         <activity
             android:name=".Login"
             android:exported="true"
@@ -36,7 +36,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity android:name=".SettingsActivity" />
     </application>
 
 </manifest>
