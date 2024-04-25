@@ -30,4 +30,5 @@
     <string name="Aboutus">About us</string>
     <string name="logout">Log out</string>
     <string name="cuenta">Account</string>
+    <string name="preferences">Here you can adjust your preferences</string>
 </resources>

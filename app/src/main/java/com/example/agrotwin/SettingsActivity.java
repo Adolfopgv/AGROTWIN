@@ -43,40 +43,40 @@ public class SettingsActivity extends AppCompatActivity {
 
         darkMode();
         spinnerMode();
-        notifications();
+//        notifications();
 
 
     }
 
-    private void notifications() {
+//    private void notifications() {
+//
+//        btnSN = findViewById(R.id.btnSN);
+//        btnSN.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+//                    //Es true, signifixa que el dispositivo que ejecuta la aplicacion tiene
+//                   // Android SDK, superior - y se ejecutará el bloque de código dentro de usted "if".
+//                    showNotification();
+//                }else{
+//
+//                    showNewNotification();
+//
+//                }
+//            }
+//        });
 
-        btnSN = findViewById(R.id.btnSN);
-        btnSN.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
-                    //Es true, signifixa que el dispositivo que ejecuta la aplicacion tiene
-                   // Android SDK, superior - y se ejecutará el bloque de código dentro de usted "if".
-                    showNotification();
-                }else{
-
-                    showNewNotification();
-
-                }
-            }
-        });
 
 
+//    }
 
-    }
-
-    private void showNotification(){
-        NotificationChannel channel = new NotificationChannel(CHANNEL_ID, "NEW", NotificationManager.IMPORTANCE_DEFAULT);
-        NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        manager.createNotificationChannel(channel);
-        showNewNotification();
-
-    }
+//    private void showNotification(){
+//        NotificationChannel channel = new NotificationChannel(CHANNEL_ID, "NEW", NotificationManager.IMPORTANCE_DEFAULT);
+//        NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+//        manager.createNotificationChannel(channel);
+//        showNewNotification();
+//
+//    }
 
     private void showNewNotification(){
 

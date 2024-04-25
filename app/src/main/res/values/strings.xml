@@ -40,6 +40,8 @@
     <string name="Aboutus">Sobre nosotros</string>
     <string name="logout">Cerrar sesión</string>
     <string name="cuenta">Cuenta</string>
+    <string name="preferences">Aquí puedes ajustar tus preferencias</string>
+
 
 
     <string name="date" translatable="false">A thin wrapper around a millisecond value that allows JDBC to identify this as an SQL DATE
