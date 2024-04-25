@@ -3,6 +3,7 @@ package com.example.agrotwin;
 import android.app.PendingIntent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.content.res.TypedArray;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatDelegate;
@@ -17,7 +18,10 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Spinner;
 import android.widget.Switch;
+import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 /**
@@ -37,7 +41,9 @@ public class SettingsFragment extends Fragment {
     private String mParam2;
 
     private Spinner spinner;
-    public static final String[] languages = {"Select language", "English", "Español"};
+
+    private static final String[] LANGUAGE = {"Select language", "English", "Español"};
+    private static final String[] SIZE = {"Select text size", "Large", "Normal", "Small"};
     private Button btnSN;
     private static final String CHANNEL_ID = "canal";
     private PendingIntent pendingIntent;
@@ -83,6 +89,7 @@ public class SettingsFragment extends Fragment {
         darkMode(view);
         spinnerMode(view);
 //        notifications();
+        textSize(view);
 
         return view;
     }
@@ -122,7 +129,7 @@ public class SettingsFragment extends Fragment {
     private void spinnerMode(View view) {
         spinner = view.findViewById(R.id.spinner);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_item, languages);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_item, LANGUAGE);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
@@ -136,6 +143,45 @@ public class SettingsFragment extends Fragment {
                     setLocale("en");
                 } else if (selectedLang.equals("Español")) {
                     setLocale("es");
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // Do nothing
+            }
+        });
+    }
+
+    private void textSize(View view) {
+        spinner = view.findViewById(R.id.spinnerr);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_item, SIZE);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+
+        spinner.setSelection(0);
+
+        //coge los recursos y los mete en un array de los tamaños
+        Resources res = getResources();
+        int[] textSizes = res.getIntArray(R.array.dimen);
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String selectedText = parent.getItemAtPosition(position).toString();
+                switch (selectedText) {
+                    case "Large":
+                        System.out.println("largo");
+                        break;
+                    case "Normal":
+                        System.out.println("medio");
+                        break;
+                    case "Small":
+                        TextView text = view.findViewById(R.id.detailDesc);
+                        text.setTextSize(textSizes[2]);
+                        break;
+                    default:
                 }
             }
 

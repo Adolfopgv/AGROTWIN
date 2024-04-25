@@ -54,7 +54,7 @@
             android:textColor="@color/text_dark"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="157dp"></TextView>
+            tools:layout_editor_absoluteY="157dp"/>
 
         <TextView
             android:layout_width="wrap_content"
