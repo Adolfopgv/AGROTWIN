@@ -92,7 +92,11 @@ public class SettingsFragment extends Fragment {
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {}
             @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {}
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                for (TextView text : texts) {
+                    text.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSizeManager.getTextSize());
+                }
+            }
         });
     }
 
