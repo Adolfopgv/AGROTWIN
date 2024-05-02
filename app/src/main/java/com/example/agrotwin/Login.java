@@ -40,7 +40,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
         if (username.isEmpty() || password.isEmpty()) {
             Toast.makeText(getApplicationContext(), "Please provide a username and password.", Toast.LENGTH_SHORT).show();
-        } else if (username.equals("admin") && password.equals("admin")) {
+        } else if (username.equals("a") && password.equals("a")) {
             login(v);
             this.finish();
         } else {

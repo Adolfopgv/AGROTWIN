@@ -40,7 +40,8 @@
             android:layout_marginTop="-10dp"
             android:text="@string/preferences"
             android:textColor="@color/text_dark"
-            android:textSize="22sp">
+            android:textSize="22sp"
+            android:id="@+id/settingsTopText">
 
 
         </TextView>
@@ -81,7 +82,8 @@
                     android:layout_toEndOf="@+id/nightModeIcon"
                     android:text="@string/nightMode"
                     android:textColor="#FFFFFF"
-                    android:textStyle="bold">
+                    android:textStyle="bold"
+                    android:id="@+id/darkModeText">
 
 
                 </TextView>
@@ -98,14 +100,6 @@
                     android:theme="@style/nightModeSwitch">
 
                 </Switch>
-<!--                <Button-->
-<!--                    android:id="@+id/btnDarkMode"-->
-<!--                    android:layout_width="30dp"-->
-<!--                    android:layout_height="34dp"-->
-<!--                    android:layout_alignParentEnd="true"-->
-<!--                    android:layout_marginEnd="11dp"-->
-<!--                    android:layout_margin="10dp"-->
-<!--                    android:theme="@style/nightModeSwitch"></Button>-->
 
 
             </RelativeLayout>
@@ -137,7 +131,8 @@
                     android:layout_toEndOf="@+id/notificationIcon"
                     android:text="@string/Notifications"
                     android:textColor="#FFFFFF"
-                    android:textStyle="bold">
+                    android:textStyle="bold"
+                    android:id="@+id/notificationsText">
 
 
                 </TextView>
@@ -187,22 +182,19 @@
                 ]]>
 
                 <ImageView
-                    android:id="@+id/Language_Iconn"
+                    android:id="@+id/textSizeIcon"
                     android:layout_width="40dp"
                     android:layout_height="55dp"
                     android:padding="4dp"
                     android:layout_marginStart="10dp"
-                    android:src="@drawable/baseline_format_size_24">
+                    android:src="@drawable/baseline_format_size_24" />
 
-                </ImageView>
-
-                <Spinner
-                    android:id="@+id/spinnerr"
+                <SeekBar
+                    android:id="@+id/seekBar"
                     android:layout_width="280dp"
                     android:layout_height="55dp"
-                    android:layout_marginStart="55dp"
-
-                    />
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@+id/textSizeIcon" />
 
 
             </RelativeLayout>
@@ -224,20 +216,14 @@
                     android:layout_height="55dp"
                     android:padding="4dp"
                     android:layout_marginStart="10dp"
-                    android:src="@drawable/baseline_language_24">
-
-                </ImageView>
+                    android:src="@drawable/baseline_language_24"/>
 
                 <Spinner
                     android:id="@+id/spinner"
                     android:layout_width="280dp"
                     android:layout_height="55dp"
-                    android:layout_marginStart="55dp"
-
-                    >
-
-
-                </Spinner>
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@+id/Language_Icon" />
 
 
             </RelativeLayout>
@@ -248,7 +234,7 @@
                 android:background="@drawable/background_settings">>
 
                 <ImageView
-                    android:id="@+id/textSizeIcon"
+                    android:id="@+id/infoIcon"
                     android:layout_width="40dp"
                     android:layout_height="55dp"
                     android:padding="4dp"
@@ -262,7 +248,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginStart="20dp"
-                    android:layout_toEndOf="@+id/textSizeIcon"
+                    android:layout_toEndOf="@+id/infoIcon"
                     android:text="@string/Size"
                     android:textColor="#FFFFFF"
                     android:textStyle="bold">

@@ -23,9 +23,7 @@ public class NavMenuActivity extends AppCompatActivity {
         replaceFragment(new HomeFragment());
 
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
-
             int itemId = item.getItemId();
-
             if (itemId == R.id.navHome) {
                 replaceFragment(new HomeFragment());
             } else if (itemId == R.id.navFav) {
@@ -38,8 +36,6 @@ public class NavMenuActivity extends AppCompatActivity {
                 Toast.makeText(this, "Logged out", Toast.LENGTH_SHORT).show();
                 this.finish();
             }
-
-
             return true;
         });
     }
