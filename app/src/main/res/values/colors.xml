@@ -20,6 +20,7 @@
     <color name="background_login_light">#ADBC9F</color>
     <color name="background_login_light2">#436850</color>
     <color name="text_dark">#12372A</color>
+    <color name="brown">#73400d</color>
 
 <!--    <selector xmlns:android="http://schemas.android.com/apk/res/android">-->
 <!--        &lt;!&ndash; Color del interruptor cuando está activo &ndash;&gt;-->
