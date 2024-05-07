@@ -26,14 +26,11 @@ public class DetailActivity extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         textViews = new ArrayList<>();
-        textViews.add(findViewById(R.id.detailDesc));
         textViews.add(findViewById(R.id.detailTitle));
-        detailImage = findViewById(R.id.detailImage);
 
         Bundle bundle = getIntent().getExtras();
         if (bundle != null){
-            textViews.get(0).setText(bundle.getInt("Desc"));
-            textViews.get(1).setText(bundle.getString("Title"));
+            textViews.get(0).setText(bundle.getString("Title"));
         }
 
         graphLineal();
