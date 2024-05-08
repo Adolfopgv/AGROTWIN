@@ -39,18 +39,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
-
-        holder.recTitle.setText(dataList.get(position).getDataTitle());
-
-        holder.recLang.setText(dataList.get(position).getDataLang());
-
         holder.recCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, DetailActivity.class);
-
                 intent.putExtra("Title", dataList.get(holder.getAdapterPosition()).getDataTitle());
-
                 context.startActivity(intent);
             }
         });
@@ -65,8 +58,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
 
 class MyViewHolder extends RecyclerView.ViewHolder{
 
-    ImageView recImage;
-    TextView recTitle, recDesc, recLang;
+    TextView recTitle;
     CardView recCard;
 
     public MyViewHolder(@NonNull View itemView) {
