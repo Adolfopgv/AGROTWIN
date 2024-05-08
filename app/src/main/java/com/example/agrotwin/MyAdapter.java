@@ -39,18 +39,17 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
-        holder.recImage.setImageResource(dataList.get(position).getDataImage());
+
         holder.recTitle.setText(dataList.get(position).getDataTitle());
-        holder.recDesc.setText(dataList.get(position).getDataDesc());
+
         holder.recLang.setText(dataList.get(position).getDataLang());
 
         holder.recCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, DetailActivity.class);
-                intent.putExtra("Image", dataList.get(holder.getAdapterPosition()).getDataImage());
+
                 intent.putExtra("Title", dataList.get(holder.getAdapterPosition()).getDataTitle());
-                intent.putExtra("Desc", dataList.get(holder.getAdapterPosition()).getDataDesc());
 
                 context.startActivity(intent);
             }
@@ -73,10 +72,9 @@ class MyViewHolder extends RecyclerView.ViewHolder{
     public MyViewHolder(@NonNull View itemView) {
         super(itemView);
 
-        recImage = itemView.findViewById(R.id.recImage);
+
         recTitle = itemView.findViewById(R.id.recTitle);
-        recDesc = itemView.findViewById(R.id.recDesc);
-        recLang = itemView.findViewById(R.id.recLang);
+
         recCard = itemView.findViewById(R.id.recCard);
     }
 }
