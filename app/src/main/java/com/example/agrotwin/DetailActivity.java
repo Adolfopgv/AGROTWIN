@@ -4,7 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.widget.ImageView;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import com.jjoe64.graphview.GraphView;
@@ -14,10 +15,11 @@ import com.jjoe64.graphview.series.LineGraphSeries;
 
 import java.util.ArrayList;
 import java.util.Objects;
+import java.util.Random;
 
 public class DetailActivity extends AppCompatActivity {
     private ArrayList<TextView> textViews;
-    private ImageView detailImage;
+    private ArrayList<Switch> switchs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,96 +30,107 @@ public class DetailActivity extends AppCompatActivity {
         textViews = new ArrayList<>();
         textViews.add(findViewById(R.id.detailTitle));
 
+        switchs = new ArrayList<>();
+        switchs.add(findViewById(R.id.t_aire));
+        switchs.add(findViewById(R.id.t_agua));
+        switchs.add(findViewById(R.id.humedad_texto));
+
         Bundle bundle = getIntent().getExtras();
         if (bundle != null){
             textViews.get(0).setText(bundle.getString("Title"));
         }
 
-        graphLineal();
-    }
-
-    private void graphLineal() {
+        /////////////////////////////////////////////////
+        ///////////     GRAPHS  VIEWS       /////////////
+        /////////////////////////////////////////////////
         // creando la grafica donde se va a imprimir
         GraphView graph = (GraphView) findViewById(R.id.graph);
+        graphLineal(graph,switchs);
+    }
 
-        // 1º valor
-        DataPoint[] points = {
-                new DataPoint(0, 5),
-                new DataPoint(1, 10),
-                new DataPoint(2, 15),
-                new DataPoint(3, 20),
-                new DataPoint(4, 15),
-                new DataPoint(5, 10),
-                new DataPoint(6, 5),
-                new DataPoint(7, 0),
-                new DataPoint(8, 5),
-                new DataPoint(9, 10),
-                new DataPoint(10, 15),
-                new DataPoint(11, 20)
-        };
+    /**
+     * Its generate a random number in 12 laps
+     * @return a randomized data generated in the program
+     */
+    private DataPoint[] generateData() {
+        Random rand = new Random();
+        int count = 12;
+        DataPoint[] values = new DataPoint[count];
+        for (int i=0; i<count; i++) {
+            double x = i;
+            double f = rand.nextDouble()*0.15+0.3;
+            double y = Math.sin(i*f+2) + rand.nextDouble()*0.3;
+            DataPoint v = new DataPoint(x, y);
+            values[i] = v;
+        }
+        return values;
+    }
+
+    private void graphLineal(GraphView graph, ArrayList<Switch> switchs) {
+        //////////// the switch we use /////////////
+        Switch t_aire = switchs.get(0);
+        Switch t_agua = switchs.get(1);
+        Switch humedad = switchs.get(2);
+
+        ////////// the data of the lines /////////
+        DataPoint[] points = generateData();
+        DataPoint[] points2 = generateData();
+        DataPoint[] points3 = generateData();
         LineGraphSeries<DataPoint> series = new LineGraphSeries<>(points);
-
-        // 2º valor
-        DataPoint[] points2 = {
-                new DataPoint(0, 20),
-                new DataPoint(1, 15),
-                new DataPoint(2, 10),
-                new DataPoint(3, 5),
-                new DataPoint(4, 0),
-                new DataPoint(5, 5),
-                new DataPoint(6, 10),
-                new DataPoint(7, 15),
-                new DataPoint(8, 20),
-                new DataPoint(9, 15),
-                new DataPoint(10, 10),
-                new DataPoint(11, 5)
-        };
         LineGraphSeries<DataPoint> series2 = new LineGraphSeries<>(points2);
-
-        // 3º valor
-        DataPoint[] points3 = {
-                new DataPoint(0, 10),
-                new DataPoint(1, 15),
-                new DataPoint(2, 20),
-                new DataPoint(3, 25),
-                new DataPoint(4, 20),
-                new DataPoint(5, 15),
-                new DataPoint(6, 10),
-                new DataPoint(7, 5),
-                new DataPoint(8, 10),
-                new DataPoint(9, 15),
-                new DataPoint(10, 20),
-                new DataPoint(11, 25)
-        };
         LineGraphSeries<DataPoint> series3 = new LineGraphSeries<>(points3);
 
 
-        // colores del primer valor
+        ///////////// Colors and thinknes of the lines ///////////////
         series.setColor(Color.rgb(115,64,13));
-        series.setThickness(4);
-
-        // colores del segundo valor
         series2.setColor(Color.rgb(255, 227, 205));
-        series2.setThickness(4);
-
-        // colores del tercer valor
         series3.setColor(Color.rgb(188, 143, 101));
+        series.setThickness(4);
+        series2.setThickness(4);
         series3.setThickness(4);
 
-        // añadirmos los valores
+        ///////////// Cheking if switch is selected ////////////
         graph.addSeries(series);
-        graph.addSeries(series2);
-        graph.addSeries(series3);
+        // T.Aire
+        t_aire.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (t_aire.isChecked()){
+                    graph.addSeries(series);
+                } else {
+                    graph.removeSeries(series);
+                }
+            }
+        });
 
-        // to be zoomeable
-        graph.getViewport().setScalableY(true);
+        // T.Agua
+        t_agua.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (t_agua.isChecked()){
+                    graph.addSeries(series2);
+                } else {
+                    graph.removeSeries(series2);
+                }
+            }
+        });
 
-        // the grid
-        graph.getGridLabelRenderer().setGridColor(Color.WHITE);
+        // Humedad
+        humedad.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (humedad.isChecked()){
+                    graph.addSeries(series3);
+                } else {
+                    graph.removeSeries(series3);
+                }
+            }
+        });
 
-        // the lines of the grid
-        graph.getGridLabelRenderer().setGridStyle(GridLabelRenderer.GridStyle.HORIZONTAL);
-
+        /////// Configs to be configureable //////////
+        graph.getViewport().setScalableY(true);// to be zoomeable
+        graph.getGridLabelRenderer().setGridColor(Color.WHITE);// the grid
+        graph.getGridLabelRenderer().setGridStyle(GridLabelRenderer.GridStyle.HORIZONTAL);// the lines of the grid
         // the labels
         graph.getGridLabelRenderer().setVerticalLabelsColor(Color.BLACK);
         graph.getGridLabelRenderer().setHorizontalLabelsColor(Color.BLACK);

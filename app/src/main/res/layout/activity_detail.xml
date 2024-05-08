@@ -79,18 +79,6 @@
             app:layout_constraintVertical_bias="0.492" />
 
         <TextView
-            android:id="@+id/humedad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="1dp"
-            android:layout_marginBottom="5dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="Humedad"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-            app:layout_constraintStart_toEndOf="@+id/imageView4" />
-
-        <TextView
             android:id="@+id/T.aire"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -127,239 +115,43 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/T.Agua">
 
-        <ImageView
-            android:id="@+id/btn_Drenaje"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/Drenaje"
-            app:layout_constraintStart_toEndOf="@+id/T.Hoja"
-            app:layout_constraintTop_toBottomOf="@+id/btn_V.Riego"
-            app:srcCompat="@drawable/boton_vacio" />
-
-        <ImageView
-            android:id="@+id/btn_V.Riego"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginBottom="10dp"
-            app:layout_constraintBottom_toTopOf="@+id/btn_Drenaje"
-            app:layout_constraintEnd_toStartOf="@+id/V.Riego"
-            app:layout_constraintStart_toEndOf="@+id/Pluv"
-            app:layout_constraintTop_toBottomOf="@+id/btn_Humedad"
-            app:srcCompat="@drawable/boton_vacio" />
-
-        <ImageView
-            android:id="@+id/btn_Humedad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="19dp"
-            android:layout_marginBottom="10dp"
-            app:layout_constraintBottom_toTopOf="@+id/btn_V.Riego"
-            app:layout_constraintEnd_toStartOf="@+id/Humedad"
-            app:layout_constraintStart_toEndOf="@+id/T.Agua"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="packed"
-            app:srcCompat="@drawable/boton_vacio" />
-
-        <ImageView
-            android:id="@+id/btn_T.Aire"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginBottom="10dp"
-            app:layout_constraintBottom_toTopOf="@+id/btn_C.Suelo"
-            app:layout_constraintEnd_toStartOf="@+id/T.Aire"
-            app:layout_constraintHorizontal_bias="0.0"
+        <Switch
+            android:id="@+id/t_aire"
+            android:layout_width="91dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="169dp"
+            android:text="T.Aire"
+            android:checked="true"
+            android:thumbTint="@color/brown"
+            app:layout_constraintEnd_toStartOf="@+id/humedad_texto"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_T.Suelo"
-            app:srcCompat="@drawable/boton_vacio" />
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/btn_T.Agua"
+        <Switch
+            android:id="@+id/t_agua"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="19dp"
-            android:layout_marginBottom="10dp"
-            app:layout_constraintBottom_toTopOf="@+id/btn_Pluv"
-            app:layout_constraintEnd_toStartOf="@+id/T.Agua"
-            app:layout_constraintStart_toEndOf="@+id/T.Aire"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="packed"
-            app:srcCompat="@drawable/boton_vacio" />
-
-        <ImageView
-            android:id="@+id/btn_T.Suelo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginBottom="10dp"
-            app:layout_constraintBottom_toTopOf="@+id/btn_T.Aire"
-            app:layout_constraintEnd_toStartOf="@+id/T.Suelo"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="packed"
-            app:srcCompat="@drawable/boton_vacio" />
-
-        <ImageView
-            android:id="@+id/btn_Pluv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginBottom="10dp"
-            app:layout_constraintBottom_toTopOf="@+id/btn_T.Hoja"
-            app:layout_constraintEnd_toStartOf="@+id/Pluv"
-            app:layout_constraintStart_toEndOf="@+id/C.Suelo"
-            app:layout_constraintTop_toBottomOf="@+id/btn_T.Agua"
-            app:srcCompat="@drawable/boton_vacio" />
-
-        <ImageView
-            android:id="@+id/btn_T.Hoja"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/T.Hoja"
-            app:layout_constraintStart_toEndOf="@+id/C.Ener"
-            app:layout_constraintTop_toBottomOf="@+id/btn_Pluv"
-            app:srcCompat="@drawable/boton_vacio" />
-
-        <ImageView
-            android:id="@+id/btn_C.Suelo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginBottom="10dp"
-            app:layout_constraintBottom_toTopOf="@+id/btn_C.Ener"
-            app:layout_constraintEnd_toStartOf="@+id/C.Suelo"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_T.Aire"
-            app:srcCompat="@drawable/boton_vacio" />
-
-        <ImageView
-            android:id="@+id/btn_C.Ener"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginBottom="5dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/C.Ener"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_C.Suelo"
-            app:srcCompat="@drawable/boton_vacio" />
-
-        <TextView
-            android:id="@+id/T.Suelo"
-            android:layout_width="60dp"
-            android:layout_height="23dp"
-            android:layout_marginBottom="10dp"
-            android:gravity="center"
-            android:text="T.Suelo"
-            app:layout_constraintBottom_toTopOf="@+id/T.Aire"
-            app:layout_constraintStart_toEndOf="@+id/btn_T.Suelo"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <TextView
-            android:id="@+id/T.Aire"
-            android:layout_width="60dp"
-            android:layout_height="0dp"
-            android:layout_marginBottom="10dp"
-            android:gravity="center"
-            android:text="T.Aire "
-            app:layout_constraintBottom_toTopOf="@+id/C.Suelo"
-            app:layout_constraintStart_toEndOf="@+id/btn_T.Aire"
-            app:layout_constraintTop_toBottomOf="@+id/T.Suelo" />
-
-        <TextView
-            android:id="@+id/C.Suelo"
-            android:layout_width="60dp"
-            android:layout_height="0dp"
-            android:layout_marginBottom="10dp"
-            android:gravity="center"
-            android:text="C.Suelo"
-            app:layout_constraintBottom_toTopOf="@+id/C.Ener"
-            app:layout_constraintStart_toEndOf="@+id/btn_C.Suelo"
-            app:layout_constraintTop_toBottomOf="@+id/T.Aire" />
-
-        <TextView
-            android:id="@+id/C.Ener"
-            android:layout_width="60dp"
-            android:layout_height="0dp"
-            android:gravity="center"
-            android:text="C.Ener"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btn_C.Ener"
-            app:layout_constraintTop_toBottomOf="@+id/C.Suelo" />
-
-        <TextView
-            android:id="@+id/T.Hoja"
-            android:layout_width="60dp"
-            android:layout_height="0dp"
-            android:gravity="center"
-            android:text="T.Hoja"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btn_T.Hoja"
-            app:layout_constraintTop_toBottomOf="@+id/Pluv" />
-
-        <TextView
-            android:id="@+id/Pluv"
-            android:layout_width="60dp"
-            android:layout_height="0dp"
-            android:layout_marginBottom="10dp"
-            android:gravity="center"
-            android:text="Pluv"
-            app:layout_constraintBottom_toTopOf="@+id/T.Hoja"
-            app:layout_constraintStart_toEndOf="@+id/btn_Pluv"
-            app:layout_constraintTop_toBottomOf="@+id/T.Agua" />
-
-        <TextView
-            android:id="@+id/T.Agua"
-            android:layout_width="60dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="10dp"
-            android:gravity="center"
             android:text="T.Agua"
-            app:layout_constraintBottom_toTopOf="@+id/Pluv"
-            app:layout_constraintStart_toEndOf="@+id/btn_T.Agua"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/V.Riego"
-            android:layout_width="60dp"
-            android:layout_height="0dp"
-            android:layout_marginBottom="10dp"
-            android:gravity="center"
-            android:text="V.Riego"
-            app:layout_constraintBottom_toTopOf="@+id/Drenaje"
-            app:layout_constraintStart_toEndOf="@+id/btn_V.Riego"
-            app:layout_constraintTop_toBottomOf="@+id/Humedad" />
-
-        <TextView
-            android:id="@+id/Drenaje"
-            android:layout_width="60dp"
-            android:layout_height="0dp"
-            android:gravity="center"
-            android:text="Drenaje"
+            android:thumbTint="@color/salmon"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btn_Drenaje"
-            app:layout_constraintTop_toBottomOf="@+id/V.Riego" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.442"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
 
-        <TextView
-            android:id="@+id/Humedad"
-            android:layout_width="60dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="10dp"
-            android:gravity="center"
+        <Switch
+            android:id="@+id/humedad_texto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="25dp"
             android:text="Humedad"
-            app:layout_constraintBottom_toTopOf="@+id/V.Riego"
-            app:layout_constraintStart_toEndOf="@+id/btn_Humedad"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:thumbTint="@color/light_bronwn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/t_aire" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>
