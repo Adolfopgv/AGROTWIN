@@ -4,23 +4,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/background_login_light"
+    android:background="@color/background_main"
     tools:context=".SettingsFragment"
-    tools:ignore="ExtraText">
+    tools:ignore="ExtraText"
+    android:id="@+id/linearLayoutSettings">
 
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
-
-
     </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:id="@+id/principalLinearLayoutSettings">
 
 
         <ImageView
@@ -32,6 +31,8 @@
             android:layout_gravity="center">
 
         </ImageView>
+
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -81,7 +82,7 @@
                     android:layout_marginStart="20dp"
                     android:layout_toEndOf="@+id/nightModeIcon"
                     android:text="@string/nightMode"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/texto"
                     android:textStyle="bold"
                     android:id="@+id/darkModeText">
 
@@ -91,13 +92,13 @@
 
                 <Switch
                     android:id="@+id/btnDarkMode"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="87dp"
+                    android:layout_height="50dp"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:switchMinWidth="50dp"
-                    android:thumbTint="@color/background_login_light"
-                    android:theme="@style/nightModeSwitch">
+                    android:theme="@style/nightModeSwitch"
+                    android:thumbTint="@color/background_login_light">
 
                 </Switch>
 
@@ -130,14 +131,13 @@
                     android:layout_marginStart="20dp"
                     android:layout_toEndOf="@+id/notificationIcon"
                     android:text="@string/Notifications"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/texto"
                     android:textStyle="bold"
                     android:id="@+id/notificationsText">
 
 
                 </TextView>
 
-                <androidx.appcompat.widget.SwitchCompat
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -145,9 +145,9 @@
                     android:switchMinWidth="50dp"
                     android:theme="@style/notificationsSwitch">
 
-                </androidx.appcompat.widget.SwitchCompat>
+                </RelativeLayout>
 
-            </RelativeLayout>
+
 
             <!--                    Private Account-->
 
@@ -231,7 +231,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/background_settings">>
+                android:background="@drawable/background_settings">
+
+                <Button
+                    android:id="@+id/aboutUs"
+                    android:layout_width="1000dp"
+                    android:layout_height="50dp"
+                    android:background="#00000000"></Button>
 
                 <ImageView
                     android:id="@+id/infoIcon"
@@ -249,8 +255,8 @@
                     android:layout_centerVertical="true"
                     android:layout_marginStart="20dp"
                     android:layout_toEndOf="@+id/infoIcon"
-                    android:text="@string/Size"
-                    android:textColor="#FFFFFF"
+                    android:text="@string/Aboutus"
+                    android:textColor="@color/texto"
                     android:textStyle="bold">
 
 
@@ -259,12 +265,15 @@
 
             </RelativeLayout>
 
+
+
             <!--                comienzo de los cambios de lenguaje-->
 
         </LinearLayout>
 
 
     </LinearLayout>
+
 
 
 </LinearLayout>

@@ -5,7 +5,6 @@ public class DataClass {
     private String dataTitle;
     private int dataDesc;
     private String dataLang;
-    private int dataImage;
 
     public String getDataTitle() {
         return dataTitle;
@@ -19,14 +18,9 @@ public class DataClass {
         return dataLang;
     }
 
-    public int getDataImage() {
-        return dataImage;
-    }
-
-    public DataClass(String dataTitle, int dataDesc, String dataLang, int dataImage) {
+    public DataClass(String dataTitle, int dataDesc, String dataLang) {
         this.dataTitle = dataTitle;
         this.dataDesc = dataDesc;
         this.dataLang = dataLang;
-        this.dataImage = dataImage;
     }
 }

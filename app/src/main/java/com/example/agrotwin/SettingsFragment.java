@@ -2,6 +2,7 @@ package com.example.agrotwin;
 
 import android.app.PendingIntent;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
@@ -10,6 +11,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -19,16 +21,18 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
 import java.util.Locale;
 
-public class SettingsFragment extends Fragment {
+public class SettingsFragment extends Fragment implements View.OnClickListener {
 
     private Spinner spinner;
     private static final String[] LANGUAGE = {"Select language", "English", "Español"};
@@ -54,8 +58,14 @@ public class SettingsFragment extends Fragment {
         darkMode(view);
         spinnerMode(view);
         SeekBarTexts(view, progress, fontSizeManager, texts);
+        aboutUs(view);
 
         return view;
+    }
+
+    private void aboutUs(View view) {
+        Button aboutUs = view.findViewById(R.id.aboutUs);
+        aboutUs.setOnClickListener(this);
     }
 
     @NonNull
@@ -130,19 +140,36 @@ public class SettingsFragment extends Fragment {
     private void darkMode(View view) {
         Switch switchDarkMode = view.findViewById(R.id.btnDarkMode);
 
+        // Establecer el estado del Switch basado en el modo actual
         switchDarkMode.setChecked(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES);
 
         switchDarkMode.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                // Cambiar el modo según el estado del switch
                 if (isChecked) {
+                    // Cambiar al modo noche
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    // Reiniciar la actividad para que los cambios se apliquen
+//                    recreate();
                 } else {
+                    // Cambiar al modo día
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                    // Reiniciar la actividad para que los cambios se apliquen
+//                    recreate();
                 }
             }
         });
     }
+
+    // Método para reiniciar la actividad y aplicar los cambios de tema
+//    private void recreate() {
+//
+//        Intent it = new Intent(getContext(), SettingsFragment.class);
+//        startActivity(it);
+//    }
+//
+
 
     private void setLocale(String langCode) {
         Locale locale = new Locale(langCode);
@@ -151,5 +178,12 @@ public class SettingsFragment extends Fragment {
         Configuration config = resources.getConfiguration();
         config.setLocale(locale);
         resources.updateConfiguration(config, resources.getDisplayMetrics());
+    }
+
+    @Override
+    public void onClick(View v) {
+        FragmentTransaction ft = getFragmentManager().beginTransaction().replace(R.id.principalLinearLayoutSettings, new AboutFragment());
+        ft.commit();
+
     }
 }

@@ -43,7 +43,7 @@
     </style>
 
     <style name="Background" parent="Theme.AppCompat.Light">
-        <item name="android:background">@color/background</item>
+        <item name="android:background">@color/text_dark</item>
     </style>
 
     <!-- Themes for font-size -->
@@ -57,5 +57,11 @@
     <style name="FontSizeLarge">
         <item name="android:textSize">24sp</item>
     </style>
+
+    <color name="bar">@color/background_login_light2</color>
+    <color name="background_main">@color/background_login_light</color>
+    <color name="texto">#FFFFFF</color>
+    <color name="texto_dark">@color/background_main</color>
+
 
 </resources>
