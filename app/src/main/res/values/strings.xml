@@ -71,6 +71,7 @@
         which can be customized vastly while improving on the efficiency of ListViews and GridViews.
     </string>
     <string name="Check">Comprueba el bienestar de tu invernadero</string>
+    <string name="humedad">humedad</string>
 
 
 </resources>

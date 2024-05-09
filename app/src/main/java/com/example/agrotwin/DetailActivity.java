@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -20,6 +21,7 @@ import java.util.Random;
 public class DetailActivity extends AppCompatActivity {
     private ArrayList<TextView> textViews;
     private ArrayList<Switch> switchs;
+    private ArrayList<Button> buttons;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
