@@ -62,7 +62,7 @@ public class HomeFragment extends Fragment {
         dataList = new ArrayList<>();
 
         for (int i = 0; i < 10; i++) {
-            androidData = new DataClass("Camera", R.string.camera, "Java", R.drawable.greenhouse);
+            androidData = new DataClass("Camera");
             dataList.add(androidData);
         }
 
