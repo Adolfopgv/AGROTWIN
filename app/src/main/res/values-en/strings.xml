@@ -31,4 +31,6 @@
     <string name="logout">Log out</string>
     <string name="cuenta">Account</string>
     <string name="preferences">Here you can adjust your preferences</string>
+    <string name="Check">Check the health of your greenhouse</string>
+    <string name="humedad">humidity</string>
 </resources>
