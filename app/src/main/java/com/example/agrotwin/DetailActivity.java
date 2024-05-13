@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
@@ -31,16 +32,52 @@ public class DetailActivity extends AppCompatActivity {
 
         textViews = new ArrayList<>();
         textViews.add(findViewById(R.id.detailTitle));
+        textViews.add(findViewById(R.id.Number));
 
         switchs = new ArrayList<>();
         switchs.add(findViewById(R.id.t_aire));
         switchs.add(findViewById(R.id.t_agua));
         switchs.add(findViewById(R.id.humedad_texto));
 
+        buttons = new ArrayList<>();
+        buttons.add(findViewById(R.id.btn_t_agua));
+        buttons.add(findViewById(R.id.btn_t_aire));
+        buttons.add(findViewById(R.id.btn_humedad));
+
         Bundle bundle = getIntent().getExtras();
         if (bundle != null){
             textViews.get(0).setText(bundle.getString("Title"));
         }
+
+        /////////////////////////////////////////////////
+        ///////////       TOP NUMBERS       /////////////
+        /////////////////////////////////////////////////
+        ///// TEXT WHEN YOU RUN THE APK
+        textViews.get(1).setText("53º");
+
+        ///// BUTTON OF AIR TEMPERATURE
+        buttons.get(0).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                textViews.get(1).setText("42º");
+            }
+        });
+
+        ///// BUTTON OF WATER TEMPERATURE
+        buttons.get(1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                textViews.get(1).setText("24º");
+            }
+        });
+
+        ///// BUTTON OF HUMIDITY
+        buttons.get(2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                textViews.get(1).setText("42%");
+            }
+        });
 
         /////////////////////////////////////////////////
         ///////////     GRAPHS  VIEWS       /////////////
@@ -68,6 +105,11 @@ public class DetailActivity extends AppCompatActivity {
         return values;
     }
 
+    /**
+     * The funccion then modify the graph
+     * @param graph The graph we use in the screen
+     * @param switchs The switch what are bottom in the screem to select what graph we want to see
+     */
     private void graphLineal(GraphView graph, ArrayList<Switch> switchs) {
         //////////// the switch we use /////////////
         Switch t_aire = switchs.get(0);

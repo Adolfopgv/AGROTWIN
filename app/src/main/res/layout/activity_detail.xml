@@ -53,17 +53,6 @@
             app:layout_constraintVertical_bias="0.4"
             app:srcCompat="@drawable/icono_tarta" />
 
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="104dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.492"
-            app:srcCompat="@drawable/botones_pizza" />
-
         <TextView
             android:id="@+id/Number"
             android:layout_width="85dp"
@@ -77,35 +66,40 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.492" />
 
-        <TextView
-            android:id="@+id/T.aire"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="T.Aire"
-            android:textSize="12sp"
-            app:layout_constraintStart_toEndOf="@+id/imageView4"
-            app:layout_constraintTop_toTopOf="@+id/imageView4" />
-
-        <TextView
-            android:id="@+id/T.agua"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
-            android:text="T.Agua"
-            android:textSize="12sp"
+        <Button
+            android:id="@+id/btn_t_aire"
+            android:layout_width="137dp"
+            android:layout_height="39dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="88dp"
+            android:text="t_aire"
+            android:background="@color/brown"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView4"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView5" />
+
+        <Button
+            android:id="@+id/btn_t_agua"
+            android:layout_width="137dp"
+            android:layout_height="39dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="52dp"
+            android:text="t_agua"
+            android:background="@color/salmon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView5" />
 
         <Button
             android:id="@+id/btn_humedad"
-            android:layout_width="0dp"
+            android:layout_width="137dp"
             android:layout_height="39dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="16dp"
             android:text="@string/humedad"
+            android:background="@color/light_brown"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView5" />
