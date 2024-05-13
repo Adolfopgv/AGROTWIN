@@ -21,12 +21,12 @@
 
             <ImageView
                 android:id="@+id/imageView1"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 android:layout_marginStart="18dp"
-                android:layout_marginTop="100dp"
-                android:src="@drawable/gota"
-                android:contentDescription="55%" />
+                android:layout_marginTop="125dp"
+                android:contentDescription="55%"
+                android:src="@drawable/gota" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -41,21 +41,21 @@
 
             <ImageView
                 android:id="@+id/imageView2"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="18dp"
-                android:layout_marginTop="15dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 android:layout_below="@id/imageView1"
-                android:src="@drawable/termometro"
-                android:contentDescription="42º" />
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="42º"
+                android:src="@drawable/termometro" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/imageView2"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="115dp"
                 android:layout_toEndOf="@id/imageView2"
-                android:layout_alignBottom="@id/imageView2"
                 android:text="42º"
                 android:textColor="@android:color/white"
                 android:textSize="22sp" />
@@ -63,30 +63,21 @@
 
             <ImageView
                 android:id="@+id/imageView3"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 android:layout_alignParentEnd="true"
-                android:layout_marginEnd="18dp"
                 android:layout_marginTop="20dp"
-                android:src="@drawable/estrella"/>
-
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_alignParentEnd="true"
                 android:layout_marginEnd="18dp"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="20dp"
-                android:src="@drawable/precaucion"/>
+                android:src="@drawable/estrella" />
 
             <TextView
                 android:id="@+id/recTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="38dp"
                 android:layout_marginTop="20dp"
                 android:maxLines="1"
-                android:layout_centerHorizontal="true"
                 android:text="Title"
                 android:textColor="@color/green"
                 android:textSize="20sp" />
