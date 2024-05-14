@@ -1,11 +1,10 @@
-package com.example.agrotwin;
+package com.example.agrotwin.usecases.home.pages.homecardadapter;
 
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -13,6 +12,8 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.agrotwin.R;
 
 public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
 

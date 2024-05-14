@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/background_main"
-    tools:context=".SettingsFragment"
+    tools:context=".usecases.home.pages.SettingsFragment"
     tools:ignore="ExtraText"
     android:id="@+id/linearLayoutSettings">
 

@@ -13,19 +13,19 @@
         android:theme="@style/Theme.NavigationDrawer"
         tools:targetApi="31" >
         <activity
-            android:name=".NavMenuActivity"
+            android:name=".usecases.home.NavMenuActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
-            android:name=".DetailActivity"
-            android:parentActivityName=".HomeFragment"
+            android:name=".usecases.home.pages.homecardadapter.DetailActivity"
+            android:parentActivityName=".usecases.home.pages.HomeFragment"
             android:exported="false" />
         <activity
-            android:name=".HomeFragment"
-            android:parentActivityName=".NavMenuActivity"
+            android:name=".usecases.home.pages.HomeFragment"
+            android:parentActivityName=".usecases.home.NavMenuActivity"
             android:exported="true" />
         <activity
-            android:name=".Login"
+            android:name=".usecases.auth.Login"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
             <intent-filter>

@@ -33,4 +33,7 @@
     <string name="preferences">Here you can adjust your preferences</string>
     <string name="Check">Check the health of your greenhouse</string>
     <string name="humedad">humidity</string>
+    <string name="sesionIniciada">Logged in</string>
+    <string name="enterUserPass">Please, enter username and password</string>
+    <string name="invalidUserPass">Invalid username or password</string>
 </resources>

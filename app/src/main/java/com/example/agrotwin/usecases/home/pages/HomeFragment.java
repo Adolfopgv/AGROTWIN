@@ -1,4 +1,4 @@
-package com.example.agrotwin;
+package com.example.agrotwin.usecases.home.pages;
 
 import android.os.Bundle;
 
@@ -11,6 +11,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
+
+import com.example.agrotwin.usecases.home.pages.homecardadapter.DataClass;
+import com.example.agrotwin.usecases.home.pages.homecardadapter.MyAdapter;
+import com.example.agrotwin.R;
 
 import java.util.ArrayList;
 import java.util.List;

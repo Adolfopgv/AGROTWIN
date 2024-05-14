@@ -1,4 +1,4 @@
-package com.example.agrotwin;
+package com.example.agrotwin.usecases.auth;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,11 +8,17 @@ import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.agrotwin.model.session.User;
+import com.example.agrotwin.usecases.home.NavMenuActivity;
+import com.example.agrotwin.R;
+
 import java.util.ArrayList;
 
 public class Login extends AppCompatActivity implements View.OnClickListener {
 
     private ArrayList<EditText> editTexts;
+    private final LoginViewModel DATA = new LoginViewModel();
+    private User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +36,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     public void login(View view) {
         Intent it = new Intent(this, NavMenuActivity.class);
         startActivity(it);
-        Toast.makeText(getApplicationContext(), "Logged in", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), DATA.getLoggedIn(), Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -38,15 +44,17 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         String username = editTexts.get(0).getText().toString().trim();
         String password = editTexts.get(1).getText().toString().trim();
 
-        if (username.isEmpty() || password.isEmpty()) {
-            Toast.makeText(getApplicationContext(), "Please provide a username and password.", Toast.LENGTH_SHORT).show();
+        user = new User(username);
+
+        if (user.getUsername().isEmpty() || password.isEmpty()) {
+            Toast.makeText(getApplicationContext(), DATA.getProvideUserPass(), Toast.LENGTH_SHORT).show();
             login(v);
             this.finish();
-        } else if (username.equals("a") && password.equals("a")) {
+        } else if (user.getUsername().equals("a") && password.equals("a")) {
             login(v);
             this.finish();
         } else {
-            Toast.makeText(getApplicationContext(), "Invalid username or password.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), DATA.getInvalidUserPass(), Toast.LENGTH_SHORT).show();
         }
     }
 }

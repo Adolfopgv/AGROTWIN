@@ -1,4 +1,4 @@
-package com.example.agrotwin;
+package com.example.agrotwin.usecases.home.pages;
 
 import android.os.Bundle;
 
@@ -9,6 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.example.agrotwin.model.domain.FontSizeManager;
+import com.example.agrotwin.R;
 
 public class FavoritesFragment extends Fragment {
 

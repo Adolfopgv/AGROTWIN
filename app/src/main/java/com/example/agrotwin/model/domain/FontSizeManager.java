@@ -1,4 +1,4 @@
-package com.example.agrotwin;
+package com.example.agrotwin.model.domain;
 
 public class FontSizeManager {
     private static FontSizeManager instance;

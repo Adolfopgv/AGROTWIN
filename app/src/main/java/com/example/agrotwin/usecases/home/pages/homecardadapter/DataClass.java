@@ -1,4 +1,4 @@
-package com.example.agrotwin;
+package com.example.agrotwin.usecases.home.pages.homecardadapter;
 
 public class DataClass {
 

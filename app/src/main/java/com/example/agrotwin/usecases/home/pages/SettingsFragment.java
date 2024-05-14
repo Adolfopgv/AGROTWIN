@@ -1,8 +1,6 @@
-package com.example.agrotwin;
+package com.example.agrotwin.usecases.home.pages;
 
-import android.app.PendingIntent;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
@@ -21,14 +19,13 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CompoundButton;
-import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import org.w3c.dom.Text;
+import com.example.agrotwin.model.domain.FontSizeManager;
+import com.example.agrotwin.R;
 
 import java.util.Locale;
 

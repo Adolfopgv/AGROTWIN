@@ -1,4 +1,4 @@
-package com.example.agrotwin;
+package com.example.agrotwin.usecases.home;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +9,12 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.agrotwin.R;
 import com.example.agrotwin.databinding.ActivityNavMenuBinding;
+import com.example.agrotwin.usecases.auth.Login;
+import com.example.agrotwin.usecases.home.pages.FavoritesFragment;
+import com.example.agrotwin.usecases.home.pages.HomeFragment;
+import com.example.agrotwin.usecases.home.pages.SettingsFragment;
 
 public class NavMenuActivity extends AppCompatActivity {
 

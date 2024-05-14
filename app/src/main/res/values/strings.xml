@@ -71,6 +71,9 @@
     </string>
     <string name="Check">Comprueba el bienestar de tu invernadero</string>
     <string name="humedad">humedad</string>
+    <string name="sesionIniciada">Sesión Iniciada</string>
+    <string name="enterUserPass">Por favor, ingrese el usuario y la contraseña</string>
+    <string name="invalidUserPass">Usuario o contraseña inválidos</string>
 
 
 </resources>

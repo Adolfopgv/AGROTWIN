@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/background_login_light"
     android:padding="10dp"
-    tools:context=".Login" >
+    tools:context=".usecases.auth.Login" >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,7 +19,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:context=".Login">
+        tools:context=".usecases.auth.Login">
 
         <ImageView
             android:id="@+id/imageViewLogin"
