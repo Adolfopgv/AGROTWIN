@@ -3,11 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools" >
 
     <application
+        android:label="@string/app_name"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@drawable/logo_agro_twin"
+        android:roundIcon="@drawable/logo_agro_twin"
         android:supportsRtl="true"
         android:theme="@style/Theme.NavigationDrawer"
         tools:targetApi="31" >
@@ -18,14 +19,11 @@
         <activity
             android:name=".DetailActivity"
             android:parentActivityName=".HomeFragment"
-            android:exported="false"
-            />
+            android:exported="false" />
         <activity
             android:name=".HomeFragment"
             android:parentActivityName=".NavMenuActivity"
-            android:exported="true"
-            >
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".Login"
             android:exported="true"
@@ -35,7 +33,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <meta-data
-                android:name="android.app.lib_name"
+                android:name="AgroTwin"
                 android:value="" />
         </activity>
     </application>
