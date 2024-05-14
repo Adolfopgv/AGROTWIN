@@ -44,17 +44,18 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         String username = editTexts.get(0).getText().toString().trim();
         String password = editTexts.get(1).getText().toString().trim();
 
-        user = new User(username);
+        user = new User();
 
-        if (user.getUsername().isEmpty() || password.isEmpty()) {
+        if (username.isEmpty() || password.isEmpty()) {
             Toast.makeText(getApplicationContext(), DATA.getProvideUserPass(), Toast.LENGTH_SHORT).show();
             login(v);
             this.finish();
-        } else if (user.getUsername().equals("a") && password.equals("a")) {
-            login(v);
-            this.finish();
-        } else {
-            Toast.makeText(getApplicationContext(), DATA.getInvalidUserPass(), Toast.LENGTH_SHORT).show();
         }
+//        } else if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
+//            login(v);
+//            this.finish();
+//        } else {
+//            Toast.makeText(getApplicationContext(), DATA.getInvalidUserPass(), Toast.LENGTH_SHORT).show();
+//        }
     }
 }
