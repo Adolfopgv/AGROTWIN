@@ -2,15 +2,18 @@ package com.example.agrotwin.usecases.home.pages.homecardadapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.agrotwin.R;
@@ -49,6 +52,22 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
             }
         });
 
+        holder.recFavorites.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Drawable drawableFav = ContextCompat.getDrawable(context, R.drawable.favorite_relleno);
+                Drawable drawableNoFav = ContextCompat.getDrawable(context, R.drawable.estrella);
+
+                if (holder.fav) {
+                    holder.fav = false;
+                    holder.recFavorites.setBackground(drawableNoFav);
+                } else {
+                    holder.fav = true;
+                    holder.recFavorites.setBackground(drawableFav);
+                }
+            }
+        });
+
     }
 
     @Override
@@ -61,13 +80,19 @@ class MyViewHolder extends RecyclerView.ViewHolder{
 
     TextView recTitle;
     CardView recCard;
+    Button recFavorites;
+    boolean fav;
 
     public MyViewHolder(@NonNull View itemView) {
         super(itemView);
 
-
+        recFavorites = itemView.findViewById(R.id.favoriteButton);
         recTitle = itemView.findViewById(R.id.recTitle);
-
         recCard = itemView.findViewById(R.id.recCard);
+        fav = false;
+    }
+
+    public boolean isFav() {
+        return fav;
     }
 }

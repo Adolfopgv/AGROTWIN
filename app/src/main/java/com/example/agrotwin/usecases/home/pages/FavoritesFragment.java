@@ -32,7 +32,7 @@ public class FavoritesFragment extends Fragment {
     }
 
     private static void TextSizes(View view) {
-        TextView[] texts = { view.findViewById(R.id.textFavoriteFragment) };
+        TextView[] texts = {  };
 
         for (TextView text : texts) {
             text.setTextSize(TypedValue.COMPLEX_UNIT_SP, FontSizeManager.getInstance().getTextSize());

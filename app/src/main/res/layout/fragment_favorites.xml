@@ -6,11 +6,11 @@
     tools:context=".usecases.home.pages.FavoritesFragment"
     android:background="@color/background_main">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/textFavoriteFragment"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFavorites"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:scrollbars="vertical"/>
 
 </FrameLayout>
