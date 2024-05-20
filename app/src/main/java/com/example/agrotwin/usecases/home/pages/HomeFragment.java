@@ -20,6 +20,12 @@ import com.example.agrotwin.R;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Fragmento que muestra la página de inicio de la aplicación.
+ * Muestra una lista de elementos y permite buscar entre ellos.
+ * @author Adolfo Pérez-Gascón Valls
+ * @author David Pimentel
+ */
 public class HomeFragment extends Fragment {
 
     private RecyclerView recyclerView;
@@ -72,6 +78,11 @@ public class HomeFragment extends Fragment {
         return view;
     }
 
+    /**
+     * Método para buscar elementos en la lista.
+     *
+     * @param text El texto a buscar en los elementos de la lista.
+     */
     private void searchList(String text){
         List<DataClass> dataSearchList = new ArrayList<>();
         for (DataClass data : dataList){

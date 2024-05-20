@@ -29,6 +29,12 @@ import com.example.agrotwin.R;
 
 import java.util.Locale;
 
+
+/**
+ * Fragmento que permite al usuario ajustar la configuración de la aplicación.
+ * Incluye opciones como el modo oscuro, el tamaño del texto y el idioma.
+ * @author David Pimentel
+ */
 public class SettingsFragment extends Fragment implements View.OnClickListener {
 
     private Spinner spinner;
@@ -136,37 +142,19 @@ public class SettingsFragment extends Fragment implements View.OnClickListener {
 
     private void darkMode(View view) {
         Switch switchDarkMode = view.findViewById(R.id.btnDarkMode);
-
-        // Establecer el estado del Switch basado en el modo actual
         switchDarkMode.setChecked(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES);
 
         switchDarkMode.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                // Cambiar el modo según el estado del switch
                 if (isChecked) {
-                    // Cambiar al modo noche
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-                    // Reiniciar la actividad para que los cambios se apliquen
-//                    recreate();
                 } else {
-                    // Cambiar al modo día
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-                    // Reiniciar la actividad para que los cambios se apliquen
-//                    recreate();
                 }
             }
         });
     }
-
-    // Método para reiniciar la actividad y aplicar los cambios de tema
-//    private void recreate() {
-//
-//        Intent it = new Intent(getContext(), SettingsFragment.class);
-//        startActivity(it);
-//    }
-//
-
 
     private void setLocale(String langCode) {
         Locale locale = new Locale(langCode);

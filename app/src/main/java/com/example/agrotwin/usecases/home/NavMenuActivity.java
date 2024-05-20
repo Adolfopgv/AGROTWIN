@@ -12,10 +12,13 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.agrotwin.R;
 import com.example.agrotwin.databinding.ActivityNavMenuBinding;
 import com.example.agrotwin.usecases.auth.Login;
-import com.example.agrotwin.usecases.home.pages.FavoritesFragment;
 import com.example.agrotwin.usecases.home.pages.HomeFragment;
 import com.example.agrotwin.usecases.home.pages.SettingsFragment;
 
+/**
+ * Actividad principal que muestra el menú de navegación y gestiona los fragmentos.
+ * @author Adolfo Pérez-Gascón Valls
+ */
 public class NavMenuActivity extends AppCompatActivity {
 
     private ActivityNavMenuBinding binding;
@@ -31,8 +34,6 @@ public class NavMenuActivity extends AppCompatActivity {
             int itemId = item.getItemId();
             if (itemId == R.id.navHome) {
                 replaceFragment(new HomeFragment());
-            } else if (itemId == R.id.navFav) {
-                replaceFragment(new FavoritesFragment());
             } else if (itemId == R.id.navSettings) {
                 replaceFragment(new SettingsFragment());
             } else {
@@ -45,6 +46,11 @@ public class NavMenuActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Reemplaza el fragmento actual con el fragmento proporcionado.
+     *
+     * @param fragment El fragmento a ser reemplazado.
+     */
     private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();

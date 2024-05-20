@@ -20,6 +20,11 @@ import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Random;
 
+/**
+ * Actividad que muestra los detalles de un elemento en la aplicación.
+ * Permite al usuario ver información detallada y gráficos relacionados.
+ * @author Adrián Carmona Gálvez
+ */
 public class DetailActivity extends AppCompatActivity {
     private ArrayList<TextView> textViews;
     private ArrayList<Switch> switchs;
@@ -50,13 +55,15 @@ public class DetailActivity extends AppCompatActivity {
             textViews.get(0).setText(bundle.getString("Title"));
         }
 
-        /////////////////////////////////////////////////
-        ///////////       TOP NUMBERS       /////////////
-        /////////////////////////////////////////////////
-        ///// TEXT WHEN YOU RUN THE APK
+        configureTopNumbers();
+        configureGraphView(switchs);
+    }
+
+    private void configureTopNumbers() {
+        // Texto cuando se ejecuta la aplicación
         textViews.get(1).setText("53º");
 
-        ///// BUTTON OF AIR TEMPERATURE
+        // Botón de temperatura del aire
         buttons.get(0).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,7 +71,7 @@ public class DetailActivity extends AppCompatActivity {
             }
         });
 
-        ///// BUTTON OF WATER TEMPERATURE
+        // Botón de temperatura del agua
         buttons.get(1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -72,25 +79,25 @@ public class DetailActivity extends AppCompatActivity {
             }
         });
 
-        ///// BUTTON OF HUMIDITY
+        // Botón de humedad
         buttons.get(2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 textViews.get(1).setText("42%");
             }
         });
+    }
 
-        /////////////////////////////////////////////////
-        ///////////     GRAPHS  VIEWS       /////////////
-        /////////////////////////////////////////////////
-        // creando la grafica donde se va a imprimir
-        GraphView graph = (GraphView) findViewById(R.id.graph);
-        graphLineal(graph,switchs);
+    private void configureGraphView(ArrayList<Switch> switchs) {
+        // Creación del gráfico
+        GraphView graph = findViewById(R.id.graph);
+        graphLineal(graph, switchs);
     }
 
     /**
-     * Its generate a random number in 12 laps
-     * @return a randomized data generated in the program
+     * Genera datos aleatorios para el gráfico.
+     *
+     * @return Un conjunto de puntos de datos aleatorios.
      */
     private DataPoint[] generateData() {
         Random rand = new Random();
@@ -107,9 +114,10 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     /**
-     * The funccion then modify the graph
-     * @param graph The graph we use in the screen
-     * @param switchs The switch what are bottom in the screem to select what graph we want to see
+     * Configura el gráfico y sus interruptores asociados.
+     *
+     * @param graph El objeto GraphView utilizado para mostrar el gráfico.
+     * @param switchs Lista para mostrar los botones en forma de switches.
      */
     private void graphLineal(GraphView graph, ArrayList<Switch> switchs) {
         //////////// the switch we use /////////////

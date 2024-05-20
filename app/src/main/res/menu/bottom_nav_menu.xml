@@ -4,9 +4,6 @@
     <item android:title="Home"
         android:icon="@drawable/nav_home"
         android:id="@+id/navHome"/>
-    <item android:title="Favorites"
-        android:icon="@drawable/nav_favorites"
-        android:id="@+id/navFav"/>
     <item android:title="Settings"
         android:icon="@drawable/nav_settings"
         android:id="@+id/navSettings"/>
