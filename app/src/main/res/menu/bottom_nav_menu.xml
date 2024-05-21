@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Home"
+    <item android:title="@string/Home"
         android:icon="@drawable/nav_home"
         android:id="@+id/navHome"/>
-    <item android:title="Settings"
+    <item android:title="@string/Settings"
         android:icon="@drawable/nav_settings"
         android:id="@+id/navSettings"/>
-    <item android:title="Log out"
+    <item android:title="@string/Aboutus"
+        android:icon="@drawable/baseline_info_24"
+        android:id="@+id/navAbout"/>
+    <item android:title="@string/logout"
         android:icon="@drawable/nav_logout"
         android:id="@+id/navLogout"/>
 </menu>

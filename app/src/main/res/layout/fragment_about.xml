@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/background"
+    android:background="@color/background_main"
     tools:context=".usecases.home.pages.AboutFragment"
     tools:ignore="ExtraText">
 
@@ -30,25 +30,10 @@
                 android:textColor="@color/black"
                 android:textSize="30sp"
                 android:textStyle="bold">
-
-
             </TextView>
-
-<!--            correo soporte-->
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="correo de soporte ¿?"
-                android:textColor="@color/black"
-                android:textSize="12sp"
-                android:layout_gravity="center">
-
-            </TextView>
-
 
             <LinearLayout
-                android:background="@drawable/round_back_whiite10_20"
+                android:background="@drawable/background_bar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -86,7 +71,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:background="@drawable/round_back_whiite10_20"
+                android:background="@drawable/background_bar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -147,7 +132,7 @@
 
 <!--            equipo y colaboradores-->
             <LinearLayout
-                android:background="@drawable/round_back_whiite10_20"
+                android:background="@drawable/background_bar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -181,19 +166,15 @@
 
 <!--            container dos-->
             <LinearLayout
-                android:background="@drawable/round_back_whiite10_20"
+                android:background="@drawable/background_bar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="60dp"
                 android:orientation="vertical"
                 android:padding="15dp">
-
-
-
-
-
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -246,16 +227,34 @@
                     android:textSize="20sp"
                     android:layout_marginTop="10dp"> </TextView>
                 <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/EquipoYColaboradores6"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:layout_marginTop="10dp"> </TextView>
-                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/EquipoYColaboradores7"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"> </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Desarrolladores2"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"> </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/EquipoYColaboradores6"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"> </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/EquipoDiseño2"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:layout_marginTop="10dp"> </TextView>
@@ -269,12 +268,20 @@
                     android:textSize="20sp"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
+                    />
 
-                    ></TextView>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/EquipoDiseño"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"> </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/EquipoDiseño2"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:layout_marginTop="10dp"> </TextView>
