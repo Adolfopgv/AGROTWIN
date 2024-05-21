@@ -14,13 +14,15 @@
     <string name="EquipoYColaboradores">Equipo y Colaboradores</string>
     <string name="EquipoYColaboradores2">Al equipo de prácticas y a los propios trabajadores de Hispasec al completo,     mencionando a Luciano Miguel Tobaria y al sector de desarrollo y comunicación por hacerlo posible.</string>
     <string name="EquipoYColaboradores3">Reconocimiento en la participación de AgroTwin: </string>
-    <string name="Desarrolladores">Sector de desarrollo:</string>
+    <string name="Desarrolladores">Desarrolladores principales:</string>
+    <string name="Desarrolladores2">Desarrolladores colaboradores:</string>
     <string name="DiseñoYComunicación">Sector de diseño y comunicación:</string>
-    <string name="EquipoYColaboradores4">- Adolfo Perez-gascón Valls</string>
-    <string name="EquipoYColaboradores5"> - Adrián Carmona gálvez</string>
-    <string name="EquipoYColaboradores6">- Karina Dudinskikh  </string>
-    <string name="EquipoYColaboradores7">- David Pimentel Salazar </string>
-    <string name="EquipoDiseño">- Mayela </string>
+    <string name="EquipoYColaboradores4" translatable="false">-Adolfo Pérez-gascón Valls</string>
+    <string name="EquipoYColaboradores5" translatable="false">-Adrián Carmona gálvez</string>
+    <string name="EquipoYColaboradores6" translatable="false">-Karina Dudinskikh</string>
+    <string name="EquipoYColaboradores7" translatable="false">-David Pimentel Salazar</string>
+    <string name="EquipoDiseño" translatable="false">-Mayela Marín Jaime</string>
+    <string name="EquipoDiseño2" translatable="false">-Natalia Marín Ortega</string>
     <string name="queEsAgroTwin1">Imagina tener el control total de tus invernaderos al alcance de tu mano.</string>
 
 

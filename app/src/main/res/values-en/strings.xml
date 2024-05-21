@@ -8,13 +8,8 @@
     <string name="EquipoYColaboradores">Team and Collaborators</string>
     <string name="EquipoYColaboradores2">To the internship team and the entire Hispasec staff, mentioning Luciano Miguel Tobaria and the development and communication sector for making this possible.</string>
     <string name="EquipoYColaboradores3">"Recognition of AgroTwin's participation: "</string>
-    <string name="Desarrolladores">Development sector:</string>
+    <string name="Desarrolladores">Lead developers:</string>
     <string name="DiseñoYComunicación">Design and communication sector:</string>
-    <string name="EquipoYColaboradores4">- Adolfo Perez-gascón Valls</string>
-    <string name="EquipoYColaboradores5">" - Adrián Carmona gálvez"</string>
-    <string name="EquipoYColaboradores6">"- Karina Dudinskikh  "</string>
-    <string name="EquipoYColaboradores7">"- David Pimentel Salazar "</string>
-    <string name="EquipoDiseño">"- Mayela "</string>
     <string name="AcercaDe">About AgroTwin</string>
     <string name="user">User</string>
     <string name="Contraseña">Password</string>
@@ -36,4 +31,5 @@
     <string name="sesionIniciada">Logged in</string>
     <string name="enterUserPass">Please, enter username and password</string>
     <string name="invalidUserPass">Invalid username or password</string>
+    <string name="Desarrolladores2">Collaborators:</string>
 </resources>

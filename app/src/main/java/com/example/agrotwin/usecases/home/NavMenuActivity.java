@@ -12,6 +12,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.agrotwin.R;
 import com.example.agrotwin.databinding.ActivityNavMenuBinding;
 import com.example.agrotwin.usecases.auth.Login;
+import com.example.agrotwin.usecases.home.pages.AboutFragment;
 import com.example.agrotwin.usecases.home.pages.HomeFragment;
 import com.example.agrotwin.usecases.home.pages.SettingsFragment;
 
@@ -36,6 +37,8 @@ public class NavMenuActivity extends AppCompatActivity {
                 replaceFragment(new HomeFragment());
             } else if (itemId == R.id.navSettings) {
                 replaceFragment(new SettingsFragment());
+            } else if (itemId == R.id.navAbout) {
+                replaceFragment(new AboutFragment());
             } else {
                 Intent it = new Intent(this, Login.class);
                 startActivity(it);

@@ -35,7 +35,7 @@ import java.util.Locale;
  * Incluye opciones como el modo oscuro, el tamaño del texto y el idioma.
  * @author David Pimentel
  */
-public class SettingsFragment extends Fragment implements View.OnClickListener {
+public class SettingsFragment extends Fragment {
 
     private Spinner spinner;
     private static final String[] LANGUAGE = {"Select language", "English", "Español"};
@@ -61,14 +61,8 @@ public class SettingsFragment extends Fragment implements View.OnClickListener {
         darkMode(view);
         spinnerMode(view);
         SeekBarTexts(view, progress, fontSizeManager, texts);
-        aboutUs(view);
 
         return view;
-    }
-
-    private void aboutUs(View view) {
-        Button aboutUs = view.findViewById(R.id.aboutUs);
-        aboutUs.setOnClickListener(this);
     }
 
     @NonNull
@@ -163,12 +157,5 @@ public class SettingsFragment extends Fragment implements View.OnClickListener {
         Configuration config = resources.getConfiguration();
         config.setLocale(locale);
         resources.updateConfiguration(config, resources.getDisplayMetrics());
-    }
-
-    @Override
-    public void onClick(View v) {
-        FragmentTransaction ft = getFragmentManager().beginTransaction().replace(R.id.principalLinearLayoutSettings, new AboutFragment());
-        ft.commit();
-
     }
 }
